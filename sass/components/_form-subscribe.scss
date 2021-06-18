@@ -1,0 +1,39 @@
+// форма подписки
+.form-subscribe {
+  display: flex;
+  margin-left: auto;
+  align-items: flex-end;
+
+  &__label:hover,
+  &__input:hover {
+    cursor: pointer;
+  }
+}
+
+// призыв подписаться
+.form-subscribe__label {
+  max-width: 358px;
+  margin-right: 12px;
+  font-weight: $font-weight-bold;
+  text-transform: uppercase;
+}
+
+// поле для ввода e-mail
+.form-subscribe__input {
+  width: 100%;
+  margin-top: 20px;
+  padding: 15px 16px;
+  font-size: 16px;
+  line-height: 1.25;
+  color: $text-light-color;
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: $border-radius;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+
+  &::placeholder {
+    color: $text-color-transparent;
+  }
+}
+
+// кнопка для отравки формы подписки

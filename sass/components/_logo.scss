@@ -1,0 +1,26 @@
+/* логотип */
+.logo {
+  font-family: "Raleway", sans-serif;
+  font-weight: $font-weight-bold;
+  font-size: 26px;
+  line-height: 1.174;
+  $logo-dark-color: #000000;
+  $logo-light-color: #ffffff;
+  $logo-accent-color: $accent-color;
+  color: $logo-dark-color;
+
+  &__header {
+    margin-right: 93px;
+    padding-top: 24px;
+    padding-bottom: 25px;
+  }
+
+  &__footer {
+    margin-bottom: 20px;
+    color: $logo-light-color;
+  }
+
+  &__first-word {
+    color: $logo-accent-color;
+  }
+}

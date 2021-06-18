@@ -1,0 +1,48 @@
+.section-footer {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background-color: $background-secondary-color;
+}
+
+.footer-box {
+  display: flex;
+  align-items: baseline;
+  color: $text-light-color;
+
+  &__contacts {
+    margin-right: 70px;
+  }
+}
+
+// адресный блок
+.address {
+  font-style: normal;
+
+  // отступы между элементами списка в адресном блоке
+  &__item:not(:last-child) {
+    margin-bottom: 9px;
+  }
+
+  &__link {
+    line-height: 1.714;
+    color: $text-color-transparent;
+
+    &--light {
+      color: $text-light-color;
+    }
+  }
+}
+
+.social-box {
+  margin-right: 93px;
+}
+
+// заголовок списка соц. сетей
+.text-appeal {
+  display: block;
+  margin-bottom: 20px;
+  font-size: 14px;
+  line-height: 1.143;
+  font-weight: $font-weight-bold;
+  text-transform: uppercase;
+}

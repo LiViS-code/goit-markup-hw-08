@@ -1,0 +1,30 @@
+/* ссылки на социальные сети */
+.social-link {
+  width: $social-link-size;
+  height: $social-link-size;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  transition-property: color, background-color;
+
+  &:hover,
+  &:focus {
+    color: $text-light-color;
+    background-color: $accent-color;
+  }
+
+  &__icon {
+    fill: currentColor;
+  }
+
+  // ссылка на социальную сеть сотрудника
+  &__team {
+    color: $icon-color;
+  }
+
+  // соц.ссылка в футере
+  &__footer {
+    background-color: $background-color-footer;
+  }
+}

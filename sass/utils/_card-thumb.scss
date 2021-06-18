@@ -1,0 +1,8 @@
+// избавляемся от зазора снизу при размещении изображения
+.card-thumb {
+  display: block;
+  &__img {
+    max-width: 100%;
+    height: auto;
+  }
+}

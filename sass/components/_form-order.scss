@@ -1,0 +1,111 @@
+// форма заказа
+.form-order {
+  font-size: 12px;
+  line-height: 1.167;
+  letter-spacing: 0.01em;
+
+  // метка поля ввода
+  &__label {
+    position: relative;
+    margin-bottom: 10px;
+    display: block;
+  }
+
+  // поле ввода в форме заказа
+  &__input {
+    width: 100%;
+    padding: 12px 0 12px 42px;
+    margin-top: 4px;
+    font-size: 16px;
+    transition: border $transition-duration $timing-function;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: $border-radius;
+
+    // убираем краску с полей ввода от браузера
+    &:-webkit-autofill,
+    &:hover,
+    &:focus,
+    &:active {
+      cursor: pointer;
+      border: 1px solid $accent-color;
+      box-shadow: 0 0 0 200px #ffffff inset;
+    }
+  }
+}
+
+// общий класс для иконок полей ввода формы
+.form-order__icon {
+  position: absolute;
+  bottom: 4px;
+  left: 15px;
+  transform: translateY(-50%);
+  fill: currentColor;
+  transition: fill $transition-duration $timing-function;
+
+  // покраска иконок при фокусе и наведении
+  .form-order__input:hover + &,
+  .form-order__input:focus + & {
+    fill: $accent-color;
+  }
+}
+
+.form-order__label-note {
+  margin-bottom: 20px;
+}
+
+// примечание в форме заказа
+.form-order__input-note {
+  padding: 12px 16px;
+  height: 120px;
+  resize: none;
+  &::placeholder {
+    color: rgba(117, 117, 117, 0.5);
+  }
+}
+
+// оформление метки чекбокса
+.form-order__label-check {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  line-height: 1.714;
+  letter-spacing: 0.03em;
+
+  &:hover,
+  &:focus {
+    cursor: pointer;
+  }
+}
+
+// прячем дефолтный чекбокс
+.form-order__input-check {
+  appearance: none;
+}
+
+// кастомный чекбокс
+.icon-check {
+  margin-right: 8.38px;
+  border-radius: 2px;
+  fill: $background-prime-color;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  background-origin: border-box;
+  transition: background-color $transition-duration $timing-function,
+    border $transition-duration $timing-function;
+
+  // фокус и ховер на чекбокс
+  .form-order__input-check:hover + &,
+  .form-order__input-check:focus + & {
+    border-color: $accent-color;
+  }
+
+  .form-order__input-check:focus + & {
+    outline: auto;
+  }
+
+  // состояние checked
+  .form-order__input-check:checked + & {
+    background-color: $accent-color;
+    outline: none;
+  }
+}

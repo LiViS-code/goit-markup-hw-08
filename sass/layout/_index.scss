@@ -1,0 +1,126 @@
+// index.html
+
+.hero-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: $text-light-color;
+
+  & .title {
+    max-width: 696px;
+    margin-bottom: 30px;
+    display: block;
+    font-weight: $font-weight-black;
+    font-size: 44px;
+    line-height: 1.364;
+    letter-spacing: 0.06em;
+    text-align: center;
+    text-transform: uppercase;
+  }
+}
+
+// сетка особенностей
+.cards-list__item--grid-features {
+  flex-basis: calc((100% - 3 * #{$gap}) / 4);
+  // сетка списка клиентов
+  &--grid-clients {
+    flex-basis: calc((100% - 6 * #{$gap}) / 6);
+  }
+}
+
+// декорация над элементом особенностей
+.cards-list__icon-features {
+  width: 100%;
+  height: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: $gap;
+  border-radius: $border-radius;
+  background-color: $backgrount-third-color;
+}
+
+// заголовки в списках особенностей
+.cards-list__title-features {
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  font-size: 14px;
+  line-height: 1.172;
+  font-weight: $font-weight-bold;
+}
+
+// параграфы в списках особенностей
+.cards-list__text-features {
+  margin-bottom: 0;
+  line-height: 1.714;
+  color: $text-muted-color;
+}
+
+// карточка примера работ
+.doing-card {
+  position: relative;
+}
+
+// карточка сотрудника команды
+.team-card {
+  background-color: $background-prime-color;
+  box-shadow: $card-team-shawow;
+  border-bottom-left-radius: $border-radius;
+  border-bottom-right-radius: $border-radius;
+
+  &__content {
+    padding: 30px;
+  }
+
+  // имя сотрудника
+  &__name {
+    margin-bottom: 10px;
+    text-align: center;
+    font-weight: $font-weight-medium;
+    font-size: 16px;
+    line-height: 1.188;
+  }
+
+  // должность сотрудника
+  &__position {
+    margin-bottom: 16px;
+    text-align: center;
+    font-size: 16px;
+    line-height: 1.188;
+    color: $text-muted-color;
+  }
+}
+
+// список ссылок на соц.сети сотрудника
+.social-list {
+  display: flex;
+  justify-content: space-between;
+
+  // интервалы между карточками сотрудников
+  &__item:not(:last-child) {
+    margin-right: 10px;
+  }
+}
+
+// ссылка на ресурс клиента
+.client-link {
+  width: 170px;
+  height: 92px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: $icon-color;
+  border-radius: $border-radius;
+  border: 1px solid $icon-color;
+
+  &:hover,
+  &:focus {
+    transition-property: border, color;
+    border: 1px solid $accent-color;
+  }
+
+  &__icon {
+    max-width: 100%;
+    fill: currentColor;
+  }
+}

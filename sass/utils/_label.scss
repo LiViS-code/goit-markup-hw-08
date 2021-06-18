@@ -1,0 +1,14 @@
+// бирка над картинкой
+.label {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: $label-height;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  color: $text-light-color;
+  background-color: $background-opacity;
+}

@@ -1,0 +1,53 @@
+/* header */
+.header-section {
+  padding-top: 0;
+  padding-bottom: 0;
+  border-bottom: 1px solid #ececec;
+}
+
+/* контейнер для содержимого шапки */
+.header-container {
+  display: flex;
+}
+
+/* навигация - контейнер*/
+.nav {
+  display: flex;
+}
+
+/* список навигационных ссылок */
+.nav__list {
+  display: flex;
+}
+
+/* ссылки навигации по сайту */
+.nav__link,
+.contact-list__link {
+  display: flex;
+  align-items: center;
+  padding: 32px 0;
+  font-weight: $font-weight-medium;
+}
+
+/* список ссылок с контактами */
+.contact-list {
+  margin-left: auto;
+  display: flex;
+}
+
+/* ссылки контактов в шапке */
+.contact-list__link {
+  color: $text-muted-color;
+}
+
+/* расстояние между ссылками в шапке */
+.nav__item:not(:last-child),
+.contact-list__item:not(:last-child) {
+  margin-right: 50px;
+}
+
+/* декорация перед контактными ссылками */
+.contact-list__icon {
+  margin-right: 10px;
+  fill: currentColor;
+}

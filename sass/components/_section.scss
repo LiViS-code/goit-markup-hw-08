@@ -1,0 +1,37 @@
+/* секции */
+.section {
+  padding: 94px 0;
+  margin: 0 auto;
+
+  // секция Герой
+  &__hero {
+    max-width: $max-width-site;
+    padding-top: 200px;
+    padding-bottom: 200px;
+    background-color: $background-secondary-color;
+    background-image: linear-gradient(
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url("../images/img.jpg");
+  }
+
+  //секция Чем мы занимаемся
+  &__doing {
+    padding-top: 0;
+  }
+
+  // Секция наша команда
+  &__team {
+    background-color: $backgrount-third-color;
+  }
+
+  // заголовок секции
+  &__title {
+    margin-bottom: 50px;
+    text-align: center;
+    font-weight: $font-weight-bold;
+    font-size: 36px;
+    line-height: 1.17;
+  }
+}
