@@ -1,6 +1,12 @@
-$max-width-site: 1600px;
-$max-width-container: 1200px;
+//точки перелома
+$size-mobile: 480px;
+$size-tablet: 768px;
+$size-desktop: 1600px;
 
+//размер контейнера
+$max-width-container: $size-mobile;
+
+// цветовая палитра
 $text-color: #212121;
 $text-color-transparent: rgba(255, 255, 255, 0.6);
 $text-light-color: #ffffff;
@@ -19,17 +25,22 @@ $background-opacity: rgba(48, 49, 59, 0.8);
 $background-overlay-op: rgba(33, 150, 243, 0.9);
 $background-backdrop: rgba(0, 0, 0, 0.2);
 
-$border-radius: 4px;
-$project-card-border: 1px solid #eee;
-
-$gap: 30px;
-
 $card-team-shawow: 0px 1px 3px rgba(0, 0, 0, 0.12),
   0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
 
+// бордеры
+$border-radius: 4px;
+$project-card-border: 1px solid #eee;
+
+// интервал между карточками
+$gap: 30px;
+
+// переходы
 $timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 $transition-duration: 250ms;
 
+// размер социальных иконок
 $social-link-size: 44px;
 
+// высота подписи над картинкой
 $label-height: 70px;

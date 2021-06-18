@@ -4,38 +4,49 @@
 
   //список ссылок
   &__list {
-    display: flex;
+    display: none;
+    @media screen and (min-width: $size-tablet) {
+      display: flex;
+    }
   }
 
   //зазоры между ссылками
   &__item:not(:last-child) {
-    margin-right: 50px;
+    @media screen and (min-width: $size-tablet) {
+      margin-right: 50px;
+    }
   }
 
   //ссылка навигации
   &__link {
-    display: flex;
-    align-items: center;
-    padding: 32px 0;
-    font-weight: $font-weight-medium;
+    @media screen and (min-width: $size-tablet) {
+      display: flex;
+      align-items: center;
+      padding: 32px 0;
+      font-weight: $font-weight-medium;
+    }
 
     //активная ссылка
     &--active {
-      display: flex;
-      position: relative;
-      flex-direction: column;
-      color: $accent-color;
+      @media screen and (min-width: $size-tablet) {
+        display: flex;
+        position: relative;
+        flex-direction: column;
+        color: $accent-color;
+      }
 
       //подчеркивание активной ссылки навигации
       &::after {
-        content: "";
-        position: absolute;
-        width: 100%;
-        height: 4px;
-        left: 0;
-        bottom: -1px;
-        border-radius: 2px;
-        background-color: $accent-color;
+        @media screen and (min-width: $size-tablet) {
+          content: "";
+          position: absolute;
+          width: 100%;
+          height: 4px;
+          left: 0;
+          bottom: -1px;
+          border-radius: 2px;
+          background-color: $accent-color;
+        }
       }
     }
   }

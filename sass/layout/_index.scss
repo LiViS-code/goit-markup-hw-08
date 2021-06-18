@@ -7,15 +7,33 @@
   color: $text-light-color;
 
   & .title {
-    max-width: 696px;
+    max-width: 360px;
     margin-bottom: 30px;
     display: block;
     font-weight: $font-weight-black;
-    font-size: 44px;
-    line-height: 1.364;
+    font-size: 26px;
+    line-height: 1.615;
     letter-spacing: 0.06em;
     text-align: center;
     text-transform: uppercase;
+  }
+
+  //для планшета
+  @media screen and (min-width: 1600px) {
+    & .title {
+      max-width: 696px;
+      font-size: 44px;
+      line-height: 1.364;
+    }
+  }
+
+  //для десктопа
+  @media screen and (min-width: 1600px) {
+    & .title {
+      max-width: 696px;
+      font-size: 44px;
+      line-height: 1.364;
+    }
   }
 }
 

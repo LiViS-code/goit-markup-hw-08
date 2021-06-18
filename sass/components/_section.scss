@@ -5,15 +5,33 @@
 
   // секция Герой
   &__hero {
-    max-width: $max-width-site;
-    padding-top: 200px;
-    padding-bottom: 200px;
     background-color: $background-secondary-color;
     background-image: linear-gradient(
         rgba(47, 48, 58, 0.4),
         rgba(47, 48, 58, 0.4)
       ),
       url("../images/img.jpg");
+  }
+
+  &__hero {
+    // для мобильного
+    @media screen and (min-width: $size-mobile) {
+      max-width: $size-mobile;
+      padding-top: 118px;
+      padding-bottom: 118px;
+    }
+
+    // для планшета
+    @media screen and (min-width: $size-tablet) {
+      max-width: $size-tablet;
+    }
+
+    // для десктопа
+    @media screen and (min-width: $size-desktop) {
+      max-width: $size-desktop;
+      padding-top: 200px;
+      padding-bottom: 200px;
+    }
   }
 
   //секция Чем мы занимаемся
