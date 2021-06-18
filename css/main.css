@@ -112,30 +112,27 @@ body {
 }
 
 .section__hero {
+  max-width: 480px;
+  padding: 118px 0;
   background-color: #2f303a;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/img.jpg");
-  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/img.jpg");
-}
-
-@media screen and (min-width: 480px) {
-  .section__hero {
-    max-width: 480px;
-    padding-top: 118px;
-    padding-bottom: 118px;
-  }
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../../images/mobile_header_img.jpg");
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../../images/mobile_header_img.jpg");
 }
 
 @media screen and (min-width: 768px) {
   .section__hero {
     max-width: 768px;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../../images/tablet_header_img.jpg");
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../../images/tablet_header_img.jpg");
   }
 }
 
 @media screen and (min-width: 1600px) {
   .section__hero {
     max-width: 1600px;
-    padding-top: 200px;
-    padding-bottom: 200px;
+    padding: 200px 0;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../../images/desktop_header_img.jpg");
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../../images/desktop_header_img.jpg");
   }
 }
 
@@ -260,7 +257,6 @@ body {
     line-height: 1.167;
     font-weight: 500;
     color: #757575;
-    outline: 1px solid red;
   }
 }
 
@@ -732,7 +728,7 @@ body {
 }
 
 .hero-box .title {
-  max-width: 360px;
+  width: 360px;
   margin-bottom: 30px;
   display: block;
   font-weight: 900;
@@ -745,15 +741,7 @@ body {
 
 @media screen and (min-width: 1600px) {
   .hero-box .title {
-    max-width: 696px;
-    font-size: 44px;
-    line-height: 1.364;
-  }
-}
-
-@media screen and (min-width: 1600px) {
-  .hero-box .title {
-    max-width: 696px;
+    width: 696px;
     font-size: 44px;
     line-height: 1.364;
   }
