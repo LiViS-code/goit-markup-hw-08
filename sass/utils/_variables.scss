@@ -41,6 +41,10 @@ $transition-duration: 250ms;
 
 // размер социальных иконок
 $social-link-size: 44px;
+// интервал между соц. иконками
+$social-list-item-gap: 10px;
+// ширина контейнера под иконки
+$social-list-width: $social-link-size * 4 + 3 * $social-list-item-gap;
 
 // высота подписи над картинкой
 $label-height: 70px;
