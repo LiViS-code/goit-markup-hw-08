@@ -40,7 +40,7 @@
 
   //секция Чем мы занимаемся
   &__doing {
-    @media screen and (max-width: $size-desktop - 1px) {
+    @media screen and (max-width: $size-desktop) {
       display: none;
       padding-top: 0;
     }
@@ -53,10 +53,16 @@
 
   // заголовок секции
   &__title {
-    margin-bottom: 50px;
+    margin-bottom: 30px;
     text-align: center;
     font-weight: $font-weight-bold;
-    font-size: 36px;
-    line-height: 1.17;
+    font-size: 28px;
+    line-height: 1.179;
+
+    @media screen and (min-width: $size-desktop) {
+      margin-bottom: 50px;
+      font-size: 36px;
+      line-height: 1.167;
+    }
   }
 }
