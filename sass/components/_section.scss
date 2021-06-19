@@ -40,9 +40,9 @@
 
   //секция Чем мы занимаемся
   &__doing {
+    padding-top: 0;
     @media screen and (max-width: $size-desktop) {
       display: none;
-      padding-top: 0;
     }
   }
 

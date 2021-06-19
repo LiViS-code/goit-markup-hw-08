@@ -5,22 +5,50 @@
 }
 
 .footer-box {
-  display: flex;
-  align-items: baseline;
+  text-align: center;
   color: $text-light-color;
 
+  @media screen and (min-width: $size-tablet) {
+    display: flex;
+  }
+
+  @media screen and (min-width: $size-tablet) and (max-width: $size-desktop) {
+    flex-wrap: wrap;
+    padding-left: 76px;
+    padding-right: 89px;
+  }
+
+  @media screen and (min-width: $size-desktop) {
+    align-items: baseline;
+  }
+
   &__contacts {
-    margin-right: 70px;
+    @media screen and (min-width: $size-tablet) and (max-width: $size-desktop) {
+      margin-right: 165px;
+    }
+
+    @media screen and (min-width: $size-desktop) {
+      margin-right: 70px;
+    }
   }
 }
 
 // адресный блок
 .address {
   font-style: normal;
-
+  margin-bottom: 0;
+  &__list {
+    @media screen and (max-width: $size-desktop) {
+      margin-bottom: 60px;
+    }
+  }
   // отступы между элементами списка в адресном блоке
   &__item:not(:last-child) {
-    margin-bottom: 9px;
+    margin-bottom: 8px;
+
+    @media screen and (min-width: $size-desktop) {
+      margin-bottom: 9px;
+    }
   }
 
   &__link {
@@ -34,7 +62,16 @@
 }
 
 .social-box {
-  margin-right: 93px;
+  margin-bottom: 60px;
+
+  @media screen and (min-width: $size-tablet) and (max-width: $size-desktop) {
+    padding-top: 5px;
+  }
+
+  @media screen and (min-width: $size-desktop) {
+    margin-right: 93px;
+    margin-bottom: 0;
+  }
 }
 
 // заголовок списка соц. сетей
