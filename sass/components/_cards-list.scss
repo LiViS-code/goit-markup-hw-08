@@ -1,0 +1,27 @@
+// список карточек
+.cards-list {
+  display: flex;
+  flex-wrap: wrap;
+
+  @media screen and (min-width: $size-tablet) {
+    margin-right: calc(-1 * #{$gap});
+    margin-bottom: calc(-1 * #{$gap});
+  }
+
+  &__item {
+    @media screen and (min-width: $size-tablet) {
+      margin-right: $gap;
+      margin-bottom: $gap;
+    }
+  }
+
+  &__item:not(:last-child) {
+    @media screen and (max-width: $size-tablet - 1) {
+      margin-bottom: $gap;
+    }
+
+    @media screen and (min-width: $size-desktop) {
+      margin-right: $gap;
+    }
+  }
+}

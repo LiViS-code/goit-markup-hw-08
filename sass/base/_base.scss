@@ -36,16 +36,6 @@
   list-style-type: none;
 }
 
-// список карточек
-.cards-list {
-  display: flex;
-  flex-wrap: wrap;
-
-  &__item:not(:last-child) {
-    margin-right: $gap;
-  }
-}
-
 label,
 input,
 form {

@@ -1,11 +1,15 @@
 /* секции */
 .section {
-  padding: 94px 0;
+  padding: 60px 0;
   margin: 0 auto;
+
+  @media screen and (min-width: $size-desktop) {
+    padding: 94px 0;
+  }
 
   // секция Герой
   &__hero {
-    max-width: $size-mobile;
+    width: $size-mobile;
     padding: 118px 0;
     background-color: $background-secondary-color;
     background-image: linear-gradient(
@@ -15,7 +19,7 @@
       url("../../images/mobile_header_img.jpg");
 
     @media screen and (min-width: $size-tablet) {
-      max-width: $size-tablet;
+      width: $size-tablet;
       background-image: linear-gradient(
           rgba(47, 48, 58, 0.4),
           rgba(47, 48, 58, 0.4)
@@ -24,7 +28,7 @@
     }
 
     @media screen and (min-width: $size-desktop) {
-      max-width: $size-desktop;
+      width: $size-desktop;
       padding: 200px 0;
       background-image: linear-gradient(
           rgba(47, 48, 58, 0.4),
@@ -36,7 +40,10 @@
 
   //секция Чем мы занимаемся
   &__doing {
-    padding-top: 0;
+    @media screen and (max-width: $size-desktop - 1px) {
+      display: none;
+      padding-top: 0;
+    }
   }
 
   // Секция наша команда
