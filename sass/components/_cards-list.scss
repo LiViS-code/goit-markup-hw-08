@@ -1,4 +1,4 @@
-// список карточек
+// список карточек (общий блок для всех)
 .cards-list {
   display: flex;
   flex-wrap: wrap;
@@ -22,6 +22,96 @@
 
     @media screen and (min-width: $size-desktop) {
       margin-right: $gap;
+    }
+  }
+}
+
+// сетки расположения для карточек для разных секций сайта
+.cards-list__item {
+  // особенности компании
+  &--grid-features, 
+  // команда сотрудников
+  &--grid-team {
+    flex-basis: 100%;
+
+    @media screen and (min-width: $size-tablet) {
+      flex-basis: calc((100% - 2 * #{$gap}) / 2);
+    }
+
+    @media screen and (min-width: $size-desktop) {
+      flex-basis: calc((100% - 4 * #{$gap}) / 4);
+    }
+  }
+
+  // сетка списка постоянных клиентов
+  &--grid-clients {
+    flex-basis: calc((100% - 2 * #{$gap}) / 2);
+    margin-right: 30px;
+
+    @media screen and (min-width: $size-tablet) {
+      flex-basis: calc((100% - 3 * #{$gap}) / 3);
+    }
+    @media screen and (min-width: $size-desktop) {
+      flex-basis: calc((100% - 6 * #{$gap}) / 6);
+    }
+  }
+}
+
+// для секции features
+.cards-list {
+  // декорация над элементом особенностей
+  &__icon-features {
+    width: 100%;
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: $gap;
+    border-radius: $border-radius;
+    background-color: $backgrount-third-color;
+  }
+
+  // заголовки в списках особенностей
+  &__title-features {
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    font-size: 14px;
+    line-height: 1.172;
+    font-weight: $font-weight-bold;
+  }
+
+  // параграфы в списках особенностей
+  .cards-list__text-features {
+    margin-bottom: 0;
+    line-height: 1.714;
+    color: $text-muted-color;
+  }
+}
+
+// страничка portfolio
+.cards-list {
+  // список проектов
+  &__project {
+    background-color: $background-prime-color;
+    margin-bottom: calc(-1 * #{$gap});
+
+    @media screen and (min-width: $size-tablet) {
+      margin-right: calc(-1 * #{$gap});
+    }
+  }
+
+  // сетка с карточками проектов
+  &__item-project {
+    flex-basis: 100%;
+    margin-bottom: $gap;
+
+    @media screen and (min-width: $size-tablet) {
+      margin-right: $gap;
+      flex-basis: calc((100% - 2 * #{$gap}) / 2);
+    }
+
+    @media screen and (min-width: $size-desktop) {
+      flex-basis: calc((100% - 3 * #{$gap}) / 3);
     }
   }
 }

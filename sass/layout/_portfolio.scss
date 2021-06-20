@@ -2,28 +2,31 @@
 
 // список кнопок-фильтров
 .filters-list {
-  margin-bottom: 50px;
+  margin-bottom: 40px;
   display: flex;
-  justify-content: center;
+
+  @media screen and (max-width: $size-mobile) {
+    flex-wrap: wrap;
+  }
+
+  @media screen and (min-width: $size-tablet) {
+    justify-content: center;
+  }
+
+  @media screen and (min-width: $size-desktop) {
+    margin-bottom: 50px;
+  }
+
+  @media screen and (max-width: $size-mobile) {
+    &__item:nth-child(-n + 3) {
+      margin-bottom: 15px;
+    }
+  }
 
   // интервалы между кнопками фильтра
   &__item:not(:last-child) {
     margin-right: 8px;
   }
-}
-
-// список проектов
-.cards-list__project {
-  margin-right: calc(-1 * #{$gap});
-  margin-bottom: calc(-1 * #{$gap});
-  background-color: $background-prime-color;
-}
-
-// сетка с карточками проектов
-.cards-list__item-project {
-  margin-right: $gap;
-  margin-bottom: $gap;
-  flex-basis: calc((100% - 3 * #{$gap})) / 3;
 }
 
 // ссылка на проект
