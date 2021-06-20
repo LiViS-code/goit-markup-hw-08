@@ -591,12 +591,6 @@ body {
           filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
 }
 
-@media screen and (min-width: 768px) and (max-width: 1600px) {
-  .form-subscribe__input {
-    width: 450px;
-  }
-}
-
 @media screen and (max-width: 1600px) {
   .form-subscribe__input {
     margin-bottom: 20px;
@@ -832,11 +826,6 @@ body {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-  }
-}
-
-@media screen and (min-width: 768px) and (max-width: 1600px) {
-  .footer-box {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
     padding-left: 76px;

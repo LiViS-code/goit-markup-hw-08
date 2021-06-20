@@ -3,10 +3,6 @@
   padding: 0 15px;
   margin: 0 auto;
 
-  // @media screen and (min-width: $size-tablet) {
-  //   width: $size-tablet;
-  // }
-
   @media screen and (min-width: $size-desktop) {
     width: $size-desktop - 400px;
   }
