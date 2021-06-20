@@ -12,29 +12,20 @@
     width: $size-mobile;
     padding: 118px 0;
     background-color: $background-secondary-color;
-    background-image: linear-gradient(
-        rgba(47, 48, 58, 0.4),
-        rgba(47, 48, 58, 0.4)
-      ),
-      url("../../images/mobile_header_img.jpg");
+    background: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url("../../images/hero_mobile.jpg");
 
     @media screen and (min-width: $size-tablet) {
       width: $size-tablet;
-      background-image: linear-gradient(
-          rgba(47, 48, 58, 0.4),
-          rgba(47, 48, 58, 0.4)
-        ),
-        url("../../images/tablet_header_img.jpg");
+      background: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+        url("../../images/hero_tablet.jpg");
     }
 
     @media screen and (min-width: $size-desktop) {
       width: $size-desktop;
       padding: 200px 0;
-      background-image: linear-gradient(
-          rgba(47, 48, 58, 0.4),
-          rgba(47, 48, 58, 0.4)
-        ),
-        url("../../images/desktop_header_img.jpg");
+      background: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+        center / cover url("../../images/hero_desktop.jpg");
     }
   }
 
