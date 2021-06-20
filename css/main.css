@@ -544,6 +544,7 @@ body {
 
 .btn__filters {
   padding: 6px 22px;
+  white-space: nowrap;
   font-size: 16px;
   font-weight: 500;
   line-height: 1.625;
