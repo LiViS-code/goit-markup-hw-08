@@ -12,18 +12,18 @@
     padding: 118px 0;
     background-color: $background-secondary-color;
     background: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-      top / cover no-repeat url("../../images/hero_mobile.jpg");
+      top / cover no-repeat url("../images/hero_mobile.jpg");
 
     @media screen and (min-width: $size-tablet) {
       background: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-        top / cover no-repeat url("../../images/hero_tablet.jpg");
+        top / cover no-repeat url("../images/hero_tablet.jpg");
     }
 
     @media screen and (min-width: $size-desktop) {
       width: $size-desktop;
       padding: 200px 0;
       background: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-        center / cover url("../../images/hero_desktop.jpg");
+        center / cover url("../images/hero_desktop.jpg");
     }
   }
 
