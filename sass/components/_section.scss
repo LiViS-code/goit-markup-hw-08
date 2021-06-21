@@ -30,7 +30,7 @@
   //секция Чем мы занимаемся
   &__doing {
     padding-top: 0;
-    @media screen and (max-width: $size-desktop) {
+    @media screen and (max-width: $size-desktop - 1) {
       display: none;
     }
   }

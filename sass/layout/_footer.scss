@@ -10,15 +10,16 @@
 
   @media screen and (min-width: $size-tablet) {
     display: flex;
+    flex-wrap: wrap;
   }
 
-  @media screen and (min-width: $size-tablet) and (max-width: $size-desktop) {
-    flex-wrap: wrap;
-    padding-left: 76px;
-    padding-right: 89px;
+  @media screen and (min-width: $size-tablet) and (max-width: $size-desktop - 1) {
+    justify-content: center;
   }
 
   @media screen and (min-width: $size-desktop) {
+    padding-left: 0;
+    text-align: left;
     align-items: baseline;
   }
 

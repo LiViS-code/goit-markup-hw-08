@@ -2,6 +2,11 @@
 .container {
   padding: 0 15px;
   margin: 0 auto;
+  min-width: $size-mobile;
+
+  @media screen and (min-width: $size-tablet) {
+    min-width: $size-tablet;
+  }
 
   @media screen and (min-width: $size-desktop) {
     width: $size-desktop - 400px;
