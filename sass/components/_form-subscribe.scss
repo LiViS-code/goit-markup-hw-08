@@ -1,6 +1,7 @@
 // форма подписки
 .form-subscribe {
-  // text-align: center;
+  display: block;
+
   @media screen and (min-width: $size-desktop) {
     display: flex;
     margin-left: auto;
@@ -15,7 +16,6 @@
 
 // призыв подписаться
 .form-subscribe__label {
-  max-width: 358px;
   margin-right: 12px;
   font-weight: $font-weight-bold;
   text-transform: uppercase;
@@ -25,6 +25,7 @@
 .form-subscribe__input {
   width: 100%;
   padding: 15px 16px;
+  margin: 20px auto;
   font-size: 16px;
   line-height: 1.25;
   color: $text-light-color;
@@ -33,14 +34,13 @@
   border-radius: $border-radius;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
 
-  @media screen and (max-width: $size-desktop - 1) {
+  @media screen and (min-width: $size-mobile + 1) and (max-width: $size-desktop - 1) {
     width: 450px;
     display: block;
-    margin: 20px auto;
   }
 
   @media screen and (min-width: $size-desktop) {
-    margin-top: 20px;
+    margin-bottom: 0;
   }
 
   &::placeholder {
