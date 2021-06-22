@@ -5,7 +5,7 @@
   min-width: $size-mobile;
 
   @media screen and (min-width: $size-tablet) {
-    min-width: $size-tablet;
+    min-width: $size-mobile;
   }
 
   @media screen and (min-width: $size-desktop) {
