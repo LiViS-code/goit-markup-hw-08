@@ -8,8 +8,14 @@
   z-index: 3;
   padding: 0;
   color: black;
+  transition: color $transition-duration $timing-function;
   background-color: $background-prime-color;
   border: none;
+
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
 
   @media screen and (min-width: $size-tablet) {
     display: none;

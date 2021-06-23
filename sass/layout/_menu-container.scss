@@ -2,10 +2,21 @@
   display: none;
   padding: 48px 40px;
   position: absolute;
+  top: 0;
+  left: 0;
   width: 100vw;
   height: 100vh;
+  z-index: 3;
+  transform: translateX(100%);
+  transition: transform $transition-duration $timing-function;
   font-weight: $font-weight-medium;
   background-color: $background-prime-color;
+
+  // когда открыт
+  &.is-open {
+    display: block;
+    transform: translateX(0);
+  }
 }
 
 // список ссылок навигации
