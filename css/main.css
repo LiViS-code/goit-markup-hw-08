@@ -126,6 +126,8 @@ body {
   letter-spacing: 0.03em;
   font-weight: 400;
   color: #212121;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 /* секции */
