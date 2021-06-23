@@ -18,7 +18,94 @@
   </head>
   <body>
     <header class="section header-section">
+      <!-- мобильное меню -->
+      <div class="menu-container" js-menu-container id="mobile-menu">
+        <!-- мобильная навигация -->
+        <ul class="list mobile-nav-list">
+          <li class="mobile-nav-list__item">
+            <a
+              href="./index.html"
+              class="link mobile-nav-list__link mobile-nav-list__link--active"
+              >Студия</a
+            >
+          </li>
+          <li class="mobile-nav-list__item">
+            <a href="./portfolio.html" class="link mobile-nav-list__link"
+              >Портфолио</a
+            >
+          </li>
+          <li class="mobile-nav-list__item">
+            <a href="#contacts" class="link mobile-nav-list__link">Контакты</a>
+          </li>
+        </ul>
+        <!-- контакты -->
+        <ul class="list mobile-contact-list">
+          <li class="mobile-contact-list__item">
+            <a href="" class="link mobile-contact-list__link"
+              >+38 096 111 11 11</a
+            >
+          </li>
+          <li class="mobile-contact-list__item">
+            <a
+              href=""
+              class="
+                link
+                mobile-contact-list__link mobile-contact-list__link--small-font
+              "
+              >info@devstudio.com</a
+            >
+          </li>
+        </ul>
+        <!-- ссылки на соц. сети -->
+        <ul class="list mobile-media-list">
+          <li class="mobile-media-list__item">
+            <a href="" class="link mobile-media-list__link">Instagram</a>
+          </li>
+          <li class="mobile-media-list__item">
+            <a href="" class="link mobile-media-list__link">Twitter</a>
+          </li>
+          <li class="mobile-media-list__item">
+            <a href="" class="link mobile-media-list__link">Facebook</a>
+          </li>
+          <li class="mobile-media-list__item">
+            <a href="" class="link mobile-media-list__link">LinkedIn</a>
+          </li>
+        </ul>
+        <button
+          class="menu-toggle"
+          type="button"
+          js-open-menu
+          aria-expanded="true"
+          aria-controls="mobile-menu"
+          js-close-menu
+        >
+          <svg
+            class="menu-toggle__icon menu-toggle__icon--close"
+            width="19"
+            height="19"
+          >
+            <use href="./images/icons.svg#icon-menu-close"></use>
+          </svg>
+        </button>
+      </div>
       <div class="container header-container">
+        <!-- кнопка вызова навигации для мобильной версии сайта -->
+        <button
+          class="menu-toggle"
+          type="button"
+          js-open-menu
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+          js-open-menu
+        >
+          <svg
+            class="menu-toggle__icon menu-toggle__icon--menu"
+            width="24"
+            height="16"
+          >
+            <use href="./images/icons.svg#icon-menu"></use>
+          </svg>
+        </button>
         <!-- Навигация по сайту -->
         <nav class="nav">
           <a class="link logo logo__header" href="./"
@@ -26,7 +113,7 @@
           >
           <ul class="list nav__list">
             <li class="nav__item">
-              <a class="link nav__link nav__link--active" href="./"> Студия</a>
+              <a class="link nav__link nav__link--active" href="./">Студия</a>
             </li>
             <li class="nav__item">
               <a class="link nav__link" href="./portfolio.html">Портфолио</a>
@@ -621,5 +708,6 @@
     </div>
     <!-- скрипты -->
     <script src="./js/modal.js"></script>
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>
