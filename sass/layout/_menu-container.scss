@@ -1,7 +1,6 @@
 .menu-container {
-  display: none;
   padding: 48px 40px;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
@@ -14,7 +13,6 @@
 
   // когда открыт
   &.is-open {
-    display: block;
     transform: translateX(0);
   }
 }

@@ -1298,9 +1298,8 @@ body {
 }
 
 .menu-container {
-  display: none;
   padding: 48px 40px;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
@@ -1317,7 +1316,6 @@ body {
 }
 
 .menu-container.is-open {
-  display: block;
   -webkit-transform: translateX(0);
           transform: translateX(0);
 }
