@@ -5,6 +5,9 @@
   left: 0;
   width: 100vw;
   height: 100vh;
+  display: flex;
+  flex-direction: column;
+
   z-index: 3;
   transform: translateX(100%);
   transition: transform $transition-duration $timing-function;
@@ -19,7 +22,7 @@
 
 // список ссылок навигации
 .mobile-nav-list {
-  margin-bottom: 302px;
+  margin-bottom: auto;
   &__item:not(:last-child) {
     margin-bottom: $gap;
   }
