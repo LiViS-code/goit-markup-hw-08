@@ -1284,9 +1284,9 @@ body {
   display: block;
   margin-bottom: 12px;
   text-align: center;
-  font-weight: var(--font-weight-bold);
   font-size: 20px;
   line-height: 1.15;
+  font-weight: 700;
 }
 
 .is-hidden {
