@@ -32,6 +32,7 @@
 // ссылка на проект
 .project-link {
   display: flex;
+  height: 100%;
   flex-direction: column;
   transition-property: box-shadow;
 
@@ -74,6 +75,7 @@
 // блок с описание проекта
 .project-content {
   padding: 20px 24px;
+  flex-grow: 1;
   border-left: $project-card-border;
   border-right: $project-card-border;
   border-bottom: $project-card-border;
