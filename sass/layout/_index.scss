@@ -7,8 +7,11 @@
   color: $text-light-color;
 
   & .title {
-    width: 360px;
-    margin-bottom: 30px;
+    width: 100%;
+    @media screen and (min-width: $size-tablet) {
+      width: 360px;
+    }
+    margin-bottom: $gap;
     display: block;
     font-weight: $font-weight-black;
     font-size: 26px;
