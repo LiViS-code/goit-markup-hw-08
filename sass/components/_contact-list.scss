@@ -17,16 +17,12 @@
 
   &__link {
     @media screen and (min-width: $size-tablet) {
-      display: flex;
-      align-items: center;
-      font-size: 12px;
-      line-height: 1.167;
-      font-weight: $font-weight-medium;
+      @include flex-align();
+      @include font-sizes-weight(12, 14, map-get($font-weights, "medium"));
       color: $text-muted-color;
     }
     @media screen and (min-width: $size-desktop) {
-      font-size: 14px;
-      line-height: 1.143;
+      @include font-sizes(14, 16);
     }
   }
 

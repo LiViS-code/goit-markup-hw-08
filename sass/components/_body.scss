@@ -1,8 +1,5 @@
 body {
   font-family: $font-family-site;
-  font-size: 14px;
-  line-height: 1.143;
-  letter-spacing: 0.03em;
-  font-weight: $font-weight-regular;
+  @include font-set(14, 16, map-get($font-weights, "regular"), 0.03);
   color: $text-color;
 }

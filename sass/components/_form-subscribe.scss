@@ -2,10 +2,13 @@
 .form-subscribe {
   display: block;
 
+  @media screen and(min-width: $size-tablet) and (max-width: $size-desktop - 1) {
+    margin-top: 60px;
+    padding-left: 166px;
+  }
   @media screen and (min-width: $size-desktop) {
-    display: flex;
+    @include flex-align($align: flex-end);
     margin-left: auto;
-    align-items: flex-end;
   }
 
   &__label:hover,
@@ -17,7 +20,7 @@
 // призыв подписаться
 .form-subscribe__label {
   margin-right: 12px;
-  font-weight: $font-weight-bold;
+  font-weight: map-get($font-weights, "bold");
   text-transform: uppercase;
 }
 
@@ -26,13 +29,11 @@
   width: 100%;
   padding: 15px 16px;
   margin: 20px auto;
-  font-size: 16px;
-  line-height: 1.25;
+  @include font-sizes(16, 20);
   color: $text-light-color;
   background-color: transparent;
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  border-radius: $border-radius;
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  @include bordered(rgba(255, 255, 255, 0.3), $border-radius);
+  filter: drop-shadow($btn-active-state);
 
   @media screen and (min-width: $size-mobile + 1) and (max-width: $size-desktop - 1) {
     width: 450px;

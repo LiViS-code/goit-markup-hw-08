@@ -20,10 +20,9 @@
   //ссылка навигации
   &__link {
     @media screen and (min-width: $size-tablet) {
-      display: flex;
-      align-items: center;
+      @include flex-align();
       padding: 32px 0;
-      font-weight: $font-weight-medium;
+      font-weight: map-get($font-weights, "medium");
     }
 
     //активная ссылка

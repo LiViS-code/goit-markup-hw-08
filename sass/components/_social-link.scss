@@ -2,9 +2,7 @@
 .social-link {
   width: $social-link-size;
   height: $social-link-size;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @extend %flex-element-center;
   border-radius: 50%;
   transition-property: color, background-color;
 

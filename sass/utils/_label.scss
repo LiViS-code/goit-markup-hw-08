@@ -5,9 +5,7 @@
   left: 0;
   width: 100%;
   height: $label-height;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @extend %flex-element-center;
   text-transform: uppercase;
   color: $text-light-color;
   background-color: $background-opacity;

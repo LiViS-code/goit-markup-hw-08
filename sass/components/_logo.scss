@@ -1,24 +1,22 @@
 /* логотип */
 .logo {
   font-family: "Raleway", sans-serif;
-  font-weight: $font-weight-bold;
-  font-size: 24px;
-  line-height: 1.167;
+  @include font-sizes-weight(24, 28, map-get($font-weights, "bold"));
   $logo-dark-color: #000000;
   $logo-light-color: #ffffff;
   $logo-accent-color: $accent-color;
   color: $logo-dark-color;
 
   @media screen and (min-width: $size-desktop) {
-    font-size: 26px;
-    line-height: 1.174;
+    @include font-sizes(26, 31);
   }
   &__header {
     padding: 16px 0;
 
     @media screen and (min-width: $size-tablet) {
       margin-right: 88px;
-      padding: 26px 0;
+      padding-top: 26px;
+      padding-bottom: 26px;
     }
 
     @media screen and (min-width: $size-desktop) {

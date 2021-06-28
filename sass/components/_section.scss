@@ -4,7 +4,8 @@
   margin: 0 auto;
 
   @media screen and (min-width: $size-desktop) {
-    padding: 94px 0;
+    padding-top: 94px;
+    padding-bottom: 94px;
   }
 
   // секция Герой
@@ -16,14 +17,14 @@
       top / cover no-repeat url("../images/hero_mobile.jpg");
 
     @media screen and (min-width: $size-tablet) {
-      // width: 100vw;
       background: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
         top / cover no-repeat url("../images/hero_tablet.jpg");
     }
 
     @media screen and (min-width: $size-desktop) {
       width: $size-desktop;
-      padding: 200px 0;
+      padding-top: 200px;
+      padding-bottom: 200px;
       background: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
         center / cover url("../images/hero_desktop.jpg");
     }
@@ -46,14 +47,11 @@
   &__title {
     margin-bottom: $gap;
     text-align: center;
-    font-weight: $font-weight-bold;
-    font-size: 28px;
-    line-height: 1.179;
+    @include font-sizes-weight(28, 33, map-get($font-weights, "bold"));
 
     @media screen and (min-width: $size-desktop) {
       margin-bottom: 50px;
-      font-size: 36px;
-      line-height: 1.167;
+      @include font-sizes(36, 42);
     }
   }
 }

@@ -4,14 +4,14 @@
   top: 0;
   left: 0;
   width: 100vw;
-  height: 100vh;
+  height: 100%;
   display: flex;
   flex-direction: column;
 
   z-index: 3;
   transform: translateX(100%);
   transition: transform $transition-duration $timing-function;
-  font-weight: $font-weight-medium;
+  font-weight: map-get($font-weights, "medium");
   background-color: $background-prime-color;
 
   // когда открыт
@@ -27,11 +27,10 @@
     margin-bottom: $gap;
   }
   &__link {
-    font-size: 36px;
+    @include font-sizes(36, 42); // уменьшил шрифт для 320 экрана
     @media screen and (min-width: $size-mobile) {
-      font-size: 40px;
+      @include font-sizes(40, 47);
     }
-    line-height: 1.175;
     &--active {
       color: $accent-color;
     }
@@ -48,17 +47,14 @@
     margin-bottom: $gap;
   }
   &__link {
-    font-size: 26px;
-    line-height: 1.176;
+    @include font-sizes(26, 30); // для 320 экранов
     color: $accent-color;
-
     @media screen and (min-width: $size-mobile) {
-      font-size: 34px;
+      @include font-sizes(34, 40);
     }
 
     &--small-font {
-      font-size: 24px;
-      line-height: 1.167;
+      @include font-sizes(24, 28);
       color: $text-muted-color;
     }
   }
@@ -70,10 +66,9 @@
   justify-content: space-between;
   color: $accent-color;
   &__link {
-    font-size: 14px;
-    line-height: 1.222;
+    @include font-sizes(14, 16);
     @media screen and (min-width: $size-mobile) {
-      font-size: 18px;
+      @include font-sizes(18, 22);
     }
   }
 }

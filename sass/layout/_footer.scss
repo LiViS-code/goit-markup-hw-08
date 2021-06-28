@@ -15,19 +15,17 @@
 
   @media screen and (min-width: $size-tablet) and (max-width: $size-desktop - 1) {
     width: $size-tablet;
-    justify-content: center;
   }
 
   @media screen and (min-width: $size-desktop) {
-    padding-left: 0;
     flex-wrap: nowrap;
     text-align: left;
     align-items: baseline;
   }
 
   &__contacts {
-    @media screen and (min-width: $size-tablet) and (max-width: $size-desktop) {
-      margin-right: 165px;
+    @media screen and (min-width: $size-tablet) and (max-width: $size-desktop - 1) {
+      padding-left: 76px;
     }
 
     @media screen and (min-width: $size-desktop) {
@@ -39,11 +37,8 @@
 // адресный блок
 .address {
   font-style: normal;
-  margin-bottom: 0;
-  &__list {
-    @media screen and (max-width: $size-desktop) {
-      margin-bottom: 60px;
-    }
+  @media screen and(min-width: $size-desktop) {
+    width: 231px;
   }
   // отступы между элементами списка в адресном блоке
   &__item:not(:last-child) {
@@ -55,7 +50,7 @@
   }
 
   &__link {
-    line-height: 1.714;
+    line-height: lh-ceil(14, 24);
     color: $text-color-transparent;
 
     &--light {
@@ -65,15 +60,19 @@
 }
 
 .social-box {
-  margin-bottom: 60px;
+  margin: 60px 0;
 
-  @media screen and (min-width: $size-tablet) and (max-width: $size-desktop) {
-    padding-top: 5px;
+  @media screen and (min-width: $size-tablet) and (max-width: $size-desktop - 1) {
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: auto;
+    padding-right: 89px;
   }
 
   @media screen and (min-width: $size-desktop) {
-    margin-right: 93px;
+    margin-top: 0;
     margin-bottom: 0;
+    margin-right: 93px;
   }
 }
 
@@ -81,8 +80,6 @@
 .text-appeal {
   display: block;
   margin-bottom: 20px;
-  font-size: 14px;
-  line-height: 1.143;
-  font-weight: $font-weight-bold;
+  @include font-sizes-weight(14, 16, map-get($font-weights, "bold"));
   text-transform: uppercase;
 }

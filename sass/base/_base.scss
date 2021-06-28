@@ -31,9 +31,7 @@
 
 // общий стиль списков в шапке и секциях сайта
 .list {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
+  @include reset-list;
 }
 
 label,

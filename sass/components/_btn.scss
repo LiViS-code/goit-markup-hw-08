@@ -9,56 +9,65 @@
   color: $text-color;
   background-color: $backgrount-third-color;
   border-radius: $border-radius;
-  font-size: $btn-font-size;
-  letter-spacing: $btn-letter-spacing;
+  @include font-set(16, 26, map-get($font-weights, "medium"), 0.03);
 
   &:hover,
   &:focus {
     cursor: pointer;
     color: $text-light-color;
     background-color: $accent-color;
-    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
-      0px 2px 2px rgba(0, 0, 0, 0.12);
+    box-shadow: $btn-state-shadow;
   }
-}
 
-// акцентированное состояние кнопки
-.btn__accent {
-  color: $text-light-color;
-  background-color: $accent-color;
+  // акцентированное состояние кнопки
+  &__accent {
+    color: $text-light-color;
+    background-color: $accent-color;
 
-  &:hover,
-  &:focus {
-    outline: auto;
-    outline-color: $accent-color;
-    background: $accent-color-btn;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    &:hover,
+    &:focus {
+      outline: auto;
+      outline-color: $accent-color;
+      background: $accent-color-btn;
+      box-shadow: $btn-active-state;
+    }
   }
-}
 
-.btn__order,
-.btn__subscribe {
-  font-weight: $font-weight-bold;
-  line-height: 1.875;
-  letter-spacing: $btn-letter-spacing * 2;
-  transition: background-color $transition-duration $timing-function,
-    outline-color $transition-duration $timing-function;
-}
+  // кнопка перехода к заказу в секции hero
+  &__order {
+    padding: 10px 32px;
+  }
 
-// кнопка перехода к заказу в секции hero
-.btn__order {
-  padding: 10px 32px;
-}
+  // кнопка оптавки e-mail
+  &__subscribe {
+    margin: 0 auto;
+    padding: 10px 28px 10px 29px;
+    @include flex-align(inline-flex);
+    box-shadow: none;
+    @media screen and (min-width: $size-desktop) {
+      margin: 0;
+    }
+  }
 
-// кнопка оптавки e-mail
-.btn__subscribe {
-  padding: 10px 28px 10px 29px;
-  margin: 0 auto;
-  display: inline-flex;
-  align-items: center;
-  box-shadow: none;
-  @media screen and (min-width: $size-desktop) {
-    margin: 0;
+  // кнопка оптавки формы заказа из модального окна
+  &__order-submit {
+    display: block;
+    margin: $gap auto 0;
+    padding: 10px 55px 10px 56px;
+  }
+
+  &__order,
+  &__subscribe,
+  &__order-submit {
+    @include font-set(16, 30, map-get($font-weights, "bold"), 0.06);
+    transition: background-color $transition-duration $timing-function,
+      outline-color $transition-duration $timing-function;
+  }
+
+  // кнопка фильтра на страничке portfolio
+  &__filters {
+    padding: 6px 22px;
+    white-space: nowrap;
   }
 }
 
@@ -66,21 +75,4 @@
 .icon-send {
   margin-left: 10px;
   fill: currentColor;
-}
-
-// кнопка фильтра на страничке portfolio
-.btn__filters {
-  padding: 6px 22px;
-  white-space: nowrap;
-  font-weight: $font-weight-medium;
-  line-height: 1.625;
-}
-
-// кнопка оптавки формы заказа из модального окна
-.btn__order-submit {
-  display: block;
-  margin: $gap auto 0;
-  padding: 10px 55px 10px 56px;
-  line-height: 1.875;
-  letter-spacing: $btn-letter-spacing * 2;
 }
