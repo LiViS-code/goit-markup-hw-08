@@ -27,7 +27,6 @@
       padding-top: 200px;
       padding-bottom: 200px;
       @include hero-background(desktop, 1);
-
       // для ретины
       @include hero-background(desktop);
     }
