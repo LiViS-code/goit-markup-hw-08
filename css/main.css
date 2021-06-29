@@ -1390,10 +1390,21 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   color: #2196f3;
+}
+
+@media screen and (min-width: 320px) and (max-width: 479px) {
+  .mobile-media-list {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+@media screen and (min-width: 480px) and (max-width: 767px) {
+  .mobile-media-list__item:not(:last-child) {
+    margin-right: 20px;
+  }
 }
 
 .mobile-media-list__link {
@@ -1401,7 +1412,7 @@ body {
   line-height: 1.1429;
 }
 
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 480px) and (max-width: 767px) {
   .mobile-media-list__link {
     font-size: 18px;
     line-height: 1.2223;
