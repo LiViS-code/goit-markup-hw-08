@@ -3,7 +3,8 @@
   position: fixed;
   top: 0;
   left: 0;
-  width: 100vw;
+  max-width: $size-tablet - 1;
+  min-width: 100vw;
   height: 100%;
   display: flex;
   flex-direction: column;
