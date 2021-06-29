@@ -606,7 +606,6 @@ body {
 @media screen and (min-width: 768px) and (max-width: 1599px) {
   .form-subscribe {
     margin-top: 60px;
-    padding-left: 166px;
   }
 }
 
@@ -901,6 +900,9 @@ body {
 @media screen and (min-width: 768px) and (max-width: 1599px) {
   .footer-box {
     width: 768px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 }
 
@@ -923,7 +925,7 @@ body {
 
 @media screen and (min-width: 768px) and (max-width: 1599px) {
   .footer-box__contacts {
-    padding-left: 76px;
+    margin-right: 165px;
   }
 }
 
@@ -965,13 +967,6 @@ body {
 @media screen and (min-width: 320px) and (max-width: 767px) {
   .social-box {
     margin-bottom: 60px;
-  }
-}
-
-@media screen and (min-width: 768px) and (max-width: 1599px) {
-  .social-box {
-    margin-left: auto;
-    padding-right: 89px;
   }
 }
 

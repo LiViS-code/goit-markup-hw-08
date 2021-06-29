@@ -4,8 +4,8 @@
 
   @media screen and(min-width: $size-tablet) and (max-width: $size-desktop - 1) {
     margin-top: 60px;
-    padding-left: 166px;
   }
+
   @media screen and (min-width: $size-desktop) {
     @include flex-align($align: flex-end);
     margin-left: auto;

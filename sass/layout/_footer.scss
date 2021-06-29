@@ -15,6 +15,7 @@
 
   @media screen and (min-width: $size-tablet) and (max-width: $size-desktop - 1) {
     width: $size-tablet;
+    justify-content: center;
   }
 
   @media screen and (min-width: $size-desktop) {
@@ -29,7 +30,7 @@
     }
 
     @media screen and (min-width: $size-tablet) and (max-width: $size-desktop - 1) {
-      padding-left: 76px;
+      margin-right: 165px;
     }
 
     @media screen and (min-width: $size-desktop) {
@@ -66,11 +67,6 @@
 .social-box {
   @media screen and (min-width: $size-minimum) and (max-width: $size-tablet - 1) {
     margin-bottom: 60px;
-  }
-
-  @media screen and (min-width: $size-tablet) and (max-width: $size-desktop - 1) {
-    margin-left: auto;
-    padding-right: 89px;
   }
 
   @media screen and (min-width: $size-desktop) {
