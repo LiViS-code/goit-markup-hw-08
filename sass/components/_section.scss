@@ -10,7 +10,6 @@
 
   // секция Герой
   &__hero {
-    // width: $size-mobile;
     padding: 118px 0;
     background-color: $background-secondary-color;
     @include hero-background($ratio: 1);
