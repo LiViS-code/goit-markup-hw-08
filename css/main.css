@@ -750,6 +750,19 @@ body {
   letter-spacing: 0.03em;
 }
 
+@media screen and (min-width: 320px) and (max-width: 479px) {
+  .form-order__label-check {
+    font-size: 2.5vw;
+  }
+}
+
+@media screen and (min-width: 480px) {
+  .form-order__label-check {
+    font-size: 12px;
+    line-height: 1.1667;
+  }
+}
+
 @media screen and (min-width: 1600px) {
   .form-order__label-check {
     font-size: 14px;
