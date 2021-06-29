@@ -49,11 +49,24 @@
   align-items: $align;
 }
 
-@mixin hero-background($type) {
-  @media (min-device-pixel-ratio: 2),
-    (min-resolution: 192dpi),
-    (min-resolution: 2dppx) {
-    background: $hero-gradient,
-      top / cover no-repeat url("../images/#{$type}-header-2x.jpg");
+// выбор градиента в герое (тип устройсва, экран)
+// 1 - обычный экран
+// 2 - ретина
+// любое другое значение или не правильный тип устройства - серый фон
+@mixin hero-background($type: mobile, $ratio: 2) {
+  @if $ratio == 2 and ($type == mobile, $type == tablet, $type == desktop) {
+    @media (min-device-pixel-ratio: $ratio),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background: $hero-gradient,
+        center / cover no-repeat url("../images/#{$type}-header-#{$ratio}x.jpg");
+    }
+  } @else {
+    @if $ratio == 1 and ($type == mobile, $type == tablet, $type == desktop) {
+      background: $hero-gradient,
+        center / cover no-repeat url("../images/#{$type}-header-#{$ratio}x.jpg");
+    } @else {
+      // выведет первоначальный серый фон
+    }
   }
 }

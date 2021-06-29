@@ -13,14 +13,12 @@
     // width: $size-mobile;
     padding: 118px 0;
     background-color: $background-secondary-color;
-    background: $hero-gradient,
-      top / cover no-repeat url("../images/mobile-header-1x.jpg");
+    @include hero-background($ratio: 1);
     // для ретины
-    @include hero-background(mobile);
+    @include hero-background();
 
     @media screen and (min-width: $size-tablet) {
-      background: $hero-gradient,
-        top / cover no-repeat url("../images/tablet-header-1х.jpg");
+      @include hero-background(tablet, 1);
       // для ретины
       @include hero-background(tablet);
     }
@@ -29,8 +27,8 @@
       width: $size-desktop;
       padding-top: 200px;
       padding-bottom: 200px;
-      background: $hero-gradient,
-        center / cover url("../images/desktop-header-1x.jpg");
+      @include hero-background(desktop, 1);
+
       // для ретины
       @include hero-background(desktop);
     }
