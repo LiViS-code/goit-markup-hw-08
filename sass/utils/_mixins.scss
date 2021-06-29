@@ -48,3 +48,12 @@
   display: $disp;
   align-items: $align;
 }
+
+@mixin hero-background($type) {
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background: $hero-gradient,
+      top / cover no-repeat url("../images/#{$type}-header-2x.jpg");
+  }
+}

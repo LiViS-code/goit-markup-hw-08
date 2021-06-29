@@ -73,3 +73,6 @@ $social-list-width: $social-link-size * 4 + 3 * $social-list-item-gap;
 
 // высота подписи над картинкой
 $label-height: 70px;
+
+// градиент в герое
+$hero-gradient: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4));
