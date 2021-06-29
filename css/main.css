@@ -135,14 +135,14 @@ body {
 .section__hero {
   padding: 118px 0;
   background-color: #2f303a;
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), top/cover no-repeat url("../images/hero_mobile.jpg");
-  background: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), top/cover no-repeat url("../images/hero_mobile.jpg");
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), top/cover no-repeat url("../images/mobile-header-1x.jpg");
+  background: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), top/cover no-repeat url("../images/mobile-header-1x.jpg");
 }
 
 @media screen and (min-width: 768px) {
   .section__hero {
-    background: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), top/cover no-repeat url("../images/hero_tablet.jpg");
-    background: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), top/cover no-repeat url("../images/hero_tablet.jpg");
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), top/cover no-repeat url("../images/tablet-header-1х.jpg");
+    background: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), top/cover no-repeat url("../images/tablet-header-1х.jpg");
   }
 }
 
@@ -151,8 +151,8 @@ body {
     width: 1600px;
     padding-top: 200px;
     padding-bottom: 200px;
-    background: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), center/cover url("../images/hero_desktop.jpg");
-    background: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), center/cover url("../images/hero_desktop.jpg");
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), center/cover url("../images/desktop-header-1x.jpg");
+    background: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), center/cover url("../images/desktop-header-1x.jpg");
   }
 }
 
@@ -187,19 +187,31 @@ body {
 }
 
 .container {
-  padding: 0 15px;
   margin: 0 auto;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 320px) and (max-width: 479px) {
   .container {
-    width: 768px;
+    width: 90vw;
+  }
+}
+
+@media screen and (min-width: 480px) and (max-width: 767px) {
+  .container {
+    width: 450px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1599px) {
+  .container {
+    width: 738px;
   }
 }
 
 @media screen and (min-width: 1600px) {
   .container {
     width: 1200px;
+    padding: 0 15px;
   }
 }
 
