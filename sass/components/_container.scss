@@ -1,13 +1,21 @@
 // общий контейнер для всех разделов и секций
 .container {
-  padding: 0 15px;
   margin: 0 auto;
 
-  @media screen and (min-width: $size-tablet) {
-    width: $size-tablet;
+  @media screen and (min-width: 320px) and (max-width: $size-mobile - 1) {
+    width: 90vw;
+  }
+
+  @media screen and (min-width: $size-mobile) and (max-width: $size-tablet - 1) {
+    width: $size-mobile - $gap;
+  }
+
+  @media screen and (min-width: $size-tablet) and (max-width: $size-desktop - 1) {
+    width: $size-tablet - $gap;
   }
 
   @media screen and (min-width: $size-desktop) {
     width: $size-desktop - 400px;
+    padding: 0 15px;
   }
 }
