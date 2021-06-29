@@ -64,11 +64,20 @@
 // ссылки на соц. сети
 .mobile-media-list {
   display: flex;
-  justify-content: space-between;
   color: $accent-color;
+  @media screen and (min-width: $size-minimum) and (max-width: $size-mobile - 1) {
+    justify-content: space-between;
+  }
+  @media screen and (min-width: $size-mobile) and (max-width: $size-tablet - 1) {
+    &__item {
+      &:not(:last-child) {
+        margin-right: 20px;
+      }
+    }
+  }
   &__link {
     @include font-sizes(14, 16);
-    @media screen and (min-width: $size-mobile) {
+    @media screen and (min-width: $size-mobile) and (max-width: $size-tablet - 1) {
       @include font-sizes(18, 22);
     }
   }
