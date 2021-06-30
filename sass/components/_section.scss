@@ -12,9 +12,12 @@
   &__hero {
     padding: 118px 0;
     background-color: $background-secondary-color;
-    @include hero-background($ratio: 1);
-    // для ретины
-    @include hero-background();
+
+    @media screen and (min-width: $size-minimum) {
+      @include hero-background($ratio: 1);
+      // для ретины
+      @include hero-background();
+    }
 
     @media screen and (min-width: $size-tablet) {
       @include hero-background(tablet, 1);
