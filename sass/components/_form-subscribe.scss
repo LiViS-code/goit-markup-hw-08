@@ -15,36 +15,36 @@
   &__input:hover {
     cursor: pointer;
   }
-}
-
-// призыв подписаться
-.form-subscribe__label {
-  margin-right: 12px;
-  font-weight: map-get($font-weights, "bold");
-  text-transform: uppercase;
-}
-
-// поле для ввода e-mail
-.form-subscribe__input {
-  width: 100%;
-  padding: 15px 16px;
-  margin-top: 20px;
-  @include font-sizes(16, 20);
-  color: $text-light-color;
-  background-color: transparent;
-  @include bordered(rgba(255, 255, 255, 0.3), $border-radius);
-  filter: drop-shadow($btn-active-state);
-
-  @media screen and (min-width: $size-mobile + 1) and (max-width: $size-desktop - 1) {
-    width: 450px;
-    display: block;
+  // призыв подписаться
+  &__label {
+    font-weight: map-get($font-weights, "bold");
+    text-transform: uppercase;
+    @media screen and (min-width: $size-desktop) {
+      margin-right: 12px;
+    }
   }
+  // поле для ввода e-mail
+  &__input {
+    width: 100%;
+    padding: 15px 16px;
+    margin-top: 20px;
+    @include font-sizes(16, 20);
+    color: $text-light-color;
+    background-color: transparent;
+    @include bordered(rgba(255, 255, 255, 0.3), $border-radius);
+    filter: drop-shadow($btn-active-state);
 
-  @media screen and (min-width: $size-desktop) {
-    margin-bottom: 0;
-  }
+    @media screen and (min-width: $size-mobile + 1) and (max-width: $size-desktop - 1) {
+      width: 450px;
+      display: block;
+    }
 
-  &::placeholder {
-    color: $text-color-transparent;
+    @media screen and (min-width: $size-desktop) {
+      margin-bottom: 0;
+    }
+
+    &::placeholder {
+      color: $text-color-transparent;
+    }
   }
 }

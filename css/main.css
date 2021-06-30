@@ -657,9 +657,14 @@ body {
 }
 
 .form-subscribe__label {
-  margin-right: 12px;
   font-weight: 700;
   text-transform: uppercase;
+}
+
+@media screen and (min-width: 1600px) {
+  .form-subscribe__label {
+    margin-right: 12px;
+  }
 }
 
 .form-subscribe__input {
