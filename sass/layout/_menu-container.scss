@@ -88,7 +88,7 @@
   }
   &__link {
     @include font-sizes(12, 14);
-    @media screen and (min-width: $size-mobile) and (max-width: $size-tablet - 1) {
+    @media screen and (min-width: $size-mobile) {
       @include font-sizes(18, 22);
     }
   }
