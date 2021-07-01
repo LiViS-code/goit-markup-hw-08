@@ -65,18 +65,29 @@
 .mobile-media-list {
   display: flex;
   color: $accent-color;
-  @media screen and (min-width: $size-minimum) and (max-width: $size-mobile - 1) {
-    justify-content: space-between;
+
+  &__item {
+    &:not(:last-child) {
+      margin-right: 5px;
+    }
+    &:not(:last-child) > .link {
+      padding-right: 4px;
+      border-right: 1px solid $border-separator-color;
+    }
   }
-  @media screen and (min-width: $size-mobile) and (max-width: $size-tablet - 1) {
+
+  @media screen and (min-width: $size-mobile) {
     &__item {
       &:not(:last-child) {
-        margin-right: 20px;
+        margin-right: 10px;
+      }
+      &:not(:last-child) > .link {
+        padding-right: 9px;
       }
     }
   }
   &__link {
-    @include font-sizes(14, 16);
+    @include font-sizes(12, 14);
     @media screen and (min-width: $size-mobile) and (max-width: $size-tablet - 1) {
       @include font-sizes(18, 22);
     }
