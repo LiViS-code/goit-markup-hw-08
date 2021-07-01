@@ -73,6 +73,9 @@
   &__title-features {
     margin-bottom: 10px;
     text-transform: uppercase;
+    @media screen and (min-width: $size-minimum) and (max-width: $size-tablet - 1) {
+      text-align: center;
+    }
     @include font-sizes-weight(14, 16, map-get($font-weights, "bold"));
   }
 

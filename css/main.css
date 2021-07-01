@@ -477,6 +477,12 @@ body {
   font-weight: 700;
 }
 
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .cards-list__title-features {
+    text-align: center;
+  }
+}
+
 .cards-list .cards-list__text-features {
   margin-bottom: 0;
   line-height: 1.7143;
