@@ -52,8 +52,7 @@
     font-size: 64px;
   }
   @media screen and (min-width: $size-minimum) and (orientation: landscape) {
-    font-size: 32px;
-    margin-bottom: 20px;
+    margin-bottom: $gap;
   }
 
   &__item:not(:last-child) {

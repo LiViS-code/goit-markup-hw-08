@@ -1437,8 +1437,7 @@ body {
 
 @media screen and (min-width: 320px) and (orientation: landscape) {
   .mobile-contact-list {
-    font-size: 32px;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
   }
 }
 
