@@ -26,11 +26,18 @@
   margin-bottom: auto;
   &__item:not(:last-child) {
     margin-bottom: $gap;
+    @media screen and (min-width: $size-minimum) and (orientation: landscape) {
+      margin-bottom: $gap / 2;
+    }
   }
   &__link {
     @include font-sizes(36, 42); // уменьшил шрифт для 320 экрана
-    @media screen and (min-width: $size-mobile) {
+
+    @media screen and (min-width: $size-mobile) and (orientation: portrait) {
       @include font-sizes(40, 47);
+    }
+    @media screen and (min-width: $size-minimum) and (orientation: landscape) {
+      @include font-sizes(20, 24);
     }
     &--active {
       color: $accent-color;
@@ -41,22 +48,37 @@
 // контактные ссылки
 .mobile-contact-list {
   margin-bottom: 45px;
-  @media screen and (min-width: $size-mobile) {
+  @media screen and (min-width: $size-mobile) and (orientation: portrait) {
     font-size: 64px;
   }
+  @media screen and (min-width: $size-minimum) and (orientation: landscape) {
+    font-size: 32px;
+    margin-bottom: 20px;
+  }
+
   &__item:not(:last-child) {
     margin-bottom: $gap;
+    @media screen and (min-width: $size-minimum) and (orientation: landscape) {
+      margin-bottom: $gap / 2;
+    }
   }
   &__link {
     @include font-sizes(26, 30); // для 320 экранов
     color: $accent-color;
-    @media screen and (min-width: $size-mobile) {
+    @media screen and (min-width: $size-mobile) and (orientation: portrait) {
       @include font-sizes(34, 40);
+    }
+
+    @media screen and (min-width: $size-minimum) and (orientation: landscape) {
+      @include font-sizes(16, 20);
     }
 
     &--small-font {
       @include font-sizes(24, 28);
       color: $text-muted-color;
+    }
+    @media screen and (min-width: $size-minimum) and (orientation: landscape) {
+      @include font-sizes(12, 14);
     }
   }
 }
@@ -90,6 +112,9 @@
     @include font-sizes(12, 14);
     @media screen and (min-width: $size-mobile) {
       @include font-sizes(18, 22);
+    }
+    @media screen and (min-width: $size-minimum) and (orientation: landscape) {
+      @include font-sizes(9, 12);
     }
   }
 }
